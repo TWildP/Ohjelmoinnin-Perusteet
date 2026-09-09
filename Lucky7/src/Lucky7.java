@@ -26,13 +26,31 @@ public class Lucky7 {
             num3 = rng.nextInt(10) + 1;
                 System.out.println(num1 + " " + num2 + " " + num3);
 
-                if (num1 == 7 || num2 == 7 || num3 == 7) {
-                    System.out.println("You Win! Payout: 3 Euros!");
-                    bank = bank + 3;
+                if (num1 == 7 && num2 == 7 && num3 == 7) {
+                    System.out.println("MEGA JACKPOT!!!");
+                    System.out.println("MEGA JACKPOT!!!");
+                    System.out.println("MEGA JACKPOT!!!");
+
+                    System.out.println("Payout: 100 Euros!");
+                        bank = bank + 100;
                     System.out.println();
-                } else {
-                    System.out.println("You Lose");
-                    System.out.println();
+                } else
+                    if (num1 == 7 && num2 == 7 || num1 == 7 && num3 == 7 || num2 == 7 && num3 == 7) {
+                        System.out.println("Jackpot!!!");
+
+                        System.out.println("Payout: 10 Euros");
+                            bank = bank + 10;
+                        System.out.println();
+                    } else
+                        if (num1 == 7 || num2 == 7 || num3 == 7) {
+                            System.out.println("You Win!");
+
+                            System.out.println("Payout: 3 Euros!");
+                                bank = bank + 3;
+                            System.out.println();
+                        } else {
+                            System.out.println("You Lose");
+                            System.out.println();
                 }
                 System.out.println("Current Bank Balace: " + bank + " Euros");
                     if (bank == 0) {
@@ -44,7 +62,7 @@ public class Lucky7 {
                     input = in.nextLine();
                         if (input.equals("n")) {
                             break;
-                        }
+            }
         }
     }
 }
