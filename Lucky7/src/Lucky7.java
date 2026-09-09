@@ -4,16 +4,21 @@ public class Lucky7 {
     public static void main(String[] args) throws Exception {
         Scanner in = new Scanner(System.in);
 
-        int bank = 5;
+        int bank = 0;
         String input = "";
         Random rng = new Random();
             int num1;
             int num2;
             int num3;
 
-        System.out.println("Current Bank Balace: " + bank + " Euros");
-        System.out.println();
+        System.out.println("Insert Money to Play");
+            bank = in.nextInt();
+            in.nextLine();
 
+        if (bank == 0) {
+            System.out.println("You Didn't Insert Any Money");
+            System.out.println("You Need At Least 1 Euro to Play");
+        }
         while (bank > 0) {
             System.out.println("GAMBLING TIME!!!");
             System.out.println("1 Euro / Game");
