@@ -6,11 +6,17 @@ public class Shopping_List {
 
         ArrayList<String> list = new ArrayList<String>();
             String input = "";
+        
+        while (!input.equalsIgnoreCase("x")) {
+            System.out.println("Add Item (Type X to Stop)");
+                input = in.nextLine();
             
-        System.out.println("Add Item");
-        input = in.nextLine();
-            list.add(input);
-
+            if (input.equalsIgnoreCase("x")) {
+                break;
+            } else {
+                list.add(input);
+            }
+        }
         System.out.println(list);
     }
 }
