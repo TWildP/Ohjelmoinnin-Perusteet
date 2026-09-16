@@ -63,7 +63,7 @@ public class Lucky7 {
                         System.out.println("G A M E  O V E R");
                         break;
                     }
-;                System.out.println("Play Again? y/n");
+                System.out.println("Play Again? y/n");
                     input = in.nextLine();
                         if (input.equals("n")) {
                             break;
