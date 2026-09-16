@@ -17,6 +17,10 @@ public class Shopping_List {
                 list.add(input);
             }
         }
-        System.out.println(list);
+        int count = 0;
+        for (int i = 0 ; i < list.size() ; i++) {
+            count++;
+            System.out.println(count + ". " + list.get(i));
+        }
     }
 }
