@@ -4,7 +4,7 @@ public class Shopping_List {
     public static void main(String[] args) throws Exception {
         Scanner in = new Scanner(System.in);
 
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
             String input = "";
         
         while (!input.equalsIgnoreCase("x")) {
@@ -12,11 +12,13 @@ public class Shopping_List {
                 input = in.nextLine();
             
             if (input.equalsIgnoreCase("x")) {
+                in.close();
                 break;
             } else {
                 list.add(input);
             }
         }
+        System.out.println();
         int count = 0;
         for (int i = 0 ; i < list.size() ; i++) {
             count++;

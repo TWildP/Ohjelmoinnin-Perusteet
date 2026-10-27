@@ -15,7 +15,7 @@ public class Lucky7 {
             bank = in.nextInt();
             in.nextLine();
 
-        if (bank == 0) {
+        if (bank <= 0) {
             System.out.println("You Didn't Insert Any Money");
             System.out.println("You Need At Least 1 Euro to Play");
         }
@@ -61,11 +61,13 @@ public class Lucky7 {
                     if (bank == 0) {
                         System.out.println("You Lost All Your Money and Went Homeless :(");
                         System.out.println("G A M E  O V E R");
-                        break;
+                        in.close();
+                            break;
                     }
                 System.out.println("Play Again? y/n");
                     input = in.nextLine();
-                        if (input.equals("n")) {
+                        if (input.equalsIgnoreCase("n")) {
+                            in.close();
                             break;
             }
         }
